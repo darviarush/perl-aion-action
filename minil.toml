@@ -1,12 +1,9 @@
-name = "Aion-Http"
+name = "Aion-Action"
 
-# badges = ["github-actions/test.yml"]
 authority="cpan:DART"
-module_maker="ModuleBuildTiny"
-static_install = "auto"
+license="gpl_3"
 
-[release]
-do_not_upload_to_cpan=false
-hooks=[
-    "cp lib/Aion/Http.md README.md"
-]
+module_maker="ModuleBuildTiny"
+badges = ["github-actions/test.yml"]
+static_install = "auto"
+markdown_maker = "Liveman::MinillaPod2Markdown"
