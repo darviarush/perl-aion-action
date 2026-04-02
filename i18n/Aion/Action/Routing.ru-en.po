@@ -1,0 +1,36 @@
+msgid "Aion::Action::Routing - http-роутер"
+msgstr "Aion::Action::Routing - http router"
+
+msgid "Файл etc/annotation/method.ann:"
+msgstr "File etc/annotation/method.ann:"
+
+msgid "Код:"
+msgstr "Code:"
+
+msgid "Роутер для получения по URL-пути роута. Так же позволяет получить из пути ЧПУ (человекопонятные урлы)."
+msgstr "Router for obtaining a route by URL path. It also allows you to get CNC (human-readable URLs) from the path."
+
+msgid "Путь к собранным из аннотаций методам."
+msgstr "Path to methods collected from annotations."
+
+msgid "Путь к собранным из аннотаций методам. По умолчанию – `INI`."
+msgstr "Path to methods collected from annotations. Default is `INI`."
+
+msgid "Список методов."
+msgstr "List of methods."
+
+msgid "Находит соответствующий роут."
+msgstr "Finds the corresponding route."
+
+msgid "Возвращает список из двух пунктов: хеша с описанием метода и хеша с ЧПУ распознанных в пути."
+msgstr "Returns a list of two items: a hash with a description of the method and a hash of the CNC recognized in the path."
+
+msgid "Если первый пункт `undef`, а второй не `undef`, а хеш, то это значит, что роут найден, но метода (`$method`) в нём нет."
+msgstr "If the first item is `undef`, and the second is not `undef`, but a hash, then this means that the route was found, but there is no method ($method`) in it."
+
+msgid "⚖ **GPLv3**"
+msgstr "⚖ **GPLv3**"
+
+msgid "The Aion::Action::Routing module is copyright © 2026 Yaroslav O. Kosmina. Rusland. All rights reserved."
+msgstr "The Aion::Action::Routing module is copyright © 2026 Yaroslav O. Kosmina. Rusland. All rights reserved."
+

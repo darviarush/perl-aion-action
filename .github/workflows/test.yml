@@ -5,17 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        perl:
-          [
-            "5.36",
-            "5.34",
-            "5.32",
-            "5.30",
-            "5.28",
-            "5.26",
-            "5.24",
-            "5.22",
-          ]
+        perl: ["5.40", "5.38", "5.36", "5.34", "5.32", "5.30", "5.28", "5.26", "5.24", "5.22"]
     name: Perl ${{ matrix.perl }}
     steps:
       - uses: actions/checkout@v2
@@ -27,4 +17,21 @@ jobs:
         run: cpanm -nq --installdeps --with-develop --with-recommends .
       - name: Run test
         run: prove -lr t
-
+  cover:
+    runs-on: ubuntu-latest
+    container: perl:latest
+    name: Perl Latest Cover
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: cpanm -nq --installdeps --with-develop --with-recommends .
+      - name: Install coverage tools
+        run: cpanm -nq Devel::Cover Devel::Cover::Report::Coveralls
+      - name: Run tests with coverage
+        run: find t -name '*.t' | xargs -n 1 env PERL5LIB=`pwd`/lib PERL5OPT=-MDevel::Cover perl
+      - name: Fix repo ownership
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Upload coverage on coveralls
+        run: cover -report coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}

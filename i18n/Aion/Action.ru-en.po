@@ -1,0 +1,39 @@
+msgid "Aion::Action - роль для создания контроллеров."
+msgstr "Aion::Action - role for creating controllers."
+
+msgid "Файл lib/Action/HelloAction.pm:"
+msgstr "File lib/Action/HelloAction.pm:"
+
+msgid "Код:"
+msgstr "Code:"
+
+msgid "Роль **Aion::Action** предназначена для создания контроллеров."
+msgstr "The **Aion::Action** role is intended for creating controllers."
+
+msgid "Она добавляет аспект `in`, который указывает откуда брать параметр. Список мест:"
+msgstr "It adds an `in` aspect, which specifies where the parameter is to be taken from. List of places:"
+
+msgid "* path, query, data, upload, cookie, header, session, server и daemon."
+msgstr "* path, query, data, upload, cookie, header, session, server and daemon."
+
+msgid "И аспект `from`, который позволяет указывать методы из которых принимать параметры. Список методов:"
+msgstr "And the `from` aspect, which allows you to specify methods from which to accept parameters. List of methods:"
+
+msgid "* HEAD, GET, QUERY, POST, PUT, PATCH, DELETE и OPTIONS."
+msgstr "* HEAD, GET, QUERY, POST, PUT, PATCH, DELETE and OPTIONS."
+
+msgid "Настроить этот список можно через конфиг `ALLOW_METHODS`."
+msgstr "You can configure this list through the `ALLOW_METHODS` config."
+
+msgid "Конструктор. Создаёт экземпляр класса на основе запроса."
+msgstr "Constructor. Creates an instance of a class based on a request."
+
+msgid "Параметр **$request** должен быть экземпляром `Plack::Request`."
+msgstr "The **$request** parameter must be an instance of `Plack::Request`."
+
+msgid "Параметр **$slug** должен содержать полученные роутером параметры из пути."
+msgstr "The **$slug** parameter must contain the parameters received by the router from the path."
+
+msgid "⚖ **GPLv3**"
+msgstr "⚖ **GPLv3**"
+
